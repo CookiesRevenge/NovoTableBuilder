@@ -1,6 +1,6 @@
 <?php
 
-namespace CookiesRevenge\NovoTableBuilder;
+namespace CookiesRevenge\NovoUtilities\NovoTableBuilder;
 
 interface Builder_Interface
 {

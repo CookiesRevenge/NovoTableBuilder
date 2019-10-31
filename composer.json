@@ -8,13 +8,14 @@
     "license": "mit",
     "authors": [{
         "name": "Marko M",
-        "email": "miloon90@gmail.com"
+        "email": "miloon90@gmail.com",
+        "role": "Developer"
     }],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "CookiesRevenge\\NovoTableBuilder\\": "src/"
+            "CookiesRevenge\\NovoUtilities\\NovoTableBuilder\\": "src/"
         }
     }
 }
