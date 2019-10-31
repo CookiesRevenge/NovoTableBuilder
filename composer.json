@@ -15,7 +15,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "CookiesRevenge\\NovoUtilities\\NovoTableBuilder\\": "src/"
+            "CookiesRevenge\\Novo\\Utilities\\NovoTableBuilder\\": "src/"
         }
     }
 }

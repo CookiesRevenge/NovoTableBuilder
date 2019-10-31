@@ -1,6 +1,6 @@
 <?php
 
-namespace CookiesRevenge\NovoUtilities\NovoTableBuilder;
+namespace CookiesRevenge\Novo\Utilities\NovoTableBuilder;
 
 abstract class Abstract_Builder
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace CookiesRevenge\NovoUtilities\TableBuilderConstants;
+namespace CookiesRevenge\Novo\Utilities\TableBuilderConstants;
 
 class Table_Builder_Constants {
 
