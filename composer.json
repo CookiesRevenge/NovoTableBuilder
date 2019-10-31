@@ -10,7 +10,8 @@
         "name": "Marko M",
         "email": "miloon90@gmail.com"
     }],
-    "minimum-stability": "dev",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "CookiesRevenge\\NovoTableBuilder\\": "src/"
