@@ -1,0 +1,19 @@
+{
+    "name": "cookies-revenge/novo-table-builder",
+    "description": "Novo Utility used to build fully dynamic tables",
+    "type": "package",
+    "require": {
+        "php": ">=5.5"
+    },
+    "license": "mit",
+    "authors": [{
+        "name": "Marko M",
+        "email": "miloon90@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "CookiesRevenge\\NovoTableBuilder\\": "src/"
+        }
+    }
+}
