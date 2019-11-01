@@ -5,11 +5,18 @@ namespace CookiesRevenge\Novo\Utilities\NovoTableBuilder;
 abstract class Abstract_Builder
 {
 
-    abstract public function Build();
+    abstract public function BuildTable();
+    abstract public function BuildTableResults();
 
     public function SetTemplatingEngine($templatingEngine)
     {
-        $this->templatingEngine_ = $templatingEngine;
+        switch ($templatingEngine) {
+            case "smarty":
+                $this->templatingEngine_ = new CookiesRevenge\Novo\Utilities\NovoTableBuilder\TemplateEngineFacades\Smarty_Tpl_Facade();
+                break;
+            default:
+                throw new \Exception("Template engine is either invalid or unsupported.");
+        }
         return $this;
     }
 
@@ -22,6 +29,7 @@ abstract class Abstract_Builder
     public function SetDataCollection($dataCollection)
     {
         $this->dataCollection_ = $dataCollection;
+        $this->resultsTotal_ = count($dataCollection);
         return $this;
     }
 
@@ -87,6 +95,7 @@ abstract class Abstract_Builder
     // dataset sorting and batch options
     private $activePage_ = 1;
     private $resultsPerPage_ = 20;
+    private $resultsTotal_ = 0;
     private $sortingColumn_ = "Id";
     private $sortingOrder_ = "ASC";
     private $showAll_ = false;
