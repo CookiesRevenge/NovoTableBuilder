@@ -1,0 +1,1 @@
+<td>{$record[$field_definition.field_name]}</td>

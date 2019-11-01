@@ -2,7 +2,7 @@
 
 namespace CookiesRevenge\Novo\Utilities\NovoTableBuilder\Template_Engine_Facades;
 
-class Smarty_Tpl_Facade extends Abstrat_Tpl_Facade
+class Smarty_Tpl_Facade extends Abstract_Tpl_Facade
 {
 
     public function ConstructEngineObject()
@@ -15,8 +15,8 @@ class Smarty_Tpl_Facade extends Abstrat_Tpl_Facade
         $this->tplEngineObject_->setConfigDir($this->configDir_);
         $this->tplEngineObject_->setCacheDir($this->cacheDir_);
 
-        $this->smarty_->caching = (int) $this->isCachingOn_;
-        $this->smarty_->debugging = $this->isDebuggingOn_;
+        $this->tplEngineObject_->caching = (int) $this->isCachingOn_;
+        $this->tplEngineObject_->debugging = $this->isDebuggingOn_;
     }
 
     public function BuildTableHTML()
@@ -45,7 +45,7 @@ class Smarty_Tpl_Facade extends Abstrat_Tpl_Facade
 
     // these two may be overriden using setters
     // it may be good idea to override cache dir, because of W rights on the server
-    protected $templateDir_ = "../templates/smarty";
-    protected $cacheDir_ = "../templates/smarty_cache";
+    protected $templateDir_ = __DIR__ . "/../templates/smarty";
+    protected $cacheDir_ = __DIR__ . "/../templates/smarty_cache";
 
 }

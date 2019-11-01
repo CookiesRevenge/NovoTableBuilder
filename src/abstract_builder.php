@@ -12,7 +12,7 @@ abstract class Abstract_Builder
     {
         switch ($templatingEngine) {
             case "smarty":
-                $this->templatingEngine_ = new CookiesRevenge\Novo\Utilities\NovoTableBuilder\TemplateEngineFacades\Smarty_Tpl_Facade();
+                $this->templatingEngine_ = new \CookiesRevenge\Novo\Utilities\NovoTableBuilder\Template_Engine_Facades\Smarty_Tpl_Facade();
                 break;
             default:
                 throw new \Exception("Template engine is either invalid or unsupported.");
@@ -84,26 +84,26 @@ abstract class Abstract_Builder
     }
 
     // templating engine
-    private $templatingEngine_;
+    protected $templatingEngine_;
 
     // definitions map to build upon
-    private $definitionsMap_;
+    protected $definitionsMap_;
 
     // dataset
-    private $dataCollection_ = [];
+    protected $dataCollection_ = [];
 
     // dataset sorting and batch options
-    private $activePage_ = 1;
-    private $resultsPerPage_ = 20;
-    private $resultsTotal_ = 0;
-    private $sortingColumn_ = "Id";
-    private $sortingOrder_ = "ASC";
-    private $showAll_ = false;
+    protected $activePage_ = 1;
+    protected $resultsPerPage_ = 20;
+    protected $resultsTotal_ = 0;
+    protected $sortingColumn_ = "Id";
+    protected $sortingOrder_ = "ASC";
+    protected $showAll_ = false;
 
     // styling options
-    private $isBordered_;
-    private $isStriped_;
-    private $isResponsive_;
+    protected $isBordered_;
+    protected $isStriped_;
+    protected $isResponsive_;
 
     // Not supported; Include later
     // header color
