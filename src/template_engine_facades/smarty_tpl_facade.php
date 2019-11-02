@@ -22,14 +22,10 @@ class Smarty_Tpl_Facade extends Abstract_Tpl_Facade
         $this->tplEngineObject_->debugging = $this->isDebuggingOn_;
     }
 
-    public function BuildTableHTML()
+    public function BuildTableHTML($resultsOnly)
     {
-        return $this->tplEngineObject_->fetch($this->templateDir_ . "/table.tpl");
-    }
-
-    public function BuildTableResultsHTML()
-    {
-        return $this->tplEngineObject_->fetch($this->templateDir_ . "/table_results.tpl");
+        return $this->tplEngineObject_->fetch($this->templateDir_ . 
+            ($resultsOnly === true) ? "/.table_results.tpl" : "/table.tpl");
     }
 
     public function AssignVariable($varName, $varValue)
