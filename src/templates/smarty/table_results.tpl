@@ -31,7 +31,7 @@
                 {foreach $records as $record}
                     <tr class="{if isset($record.Rejected) && $record.Rejected == 1}tr-rejected{/if}">
                         {foreach $field_definitions as $field_definition}
-                            {include file="./atoms_fields/{$field_definition.type}.tpl"}
+                            {include file="atoms_field/{$field_definition.type}.tpl"}
                         {/foreach}
                     </tr>
                 {/foreach}
@@ -46,5 +46,5 @@
     </table>
 </div>
 {if $pagination}
-    {include "./table_pagination.tpl"}
+    {include "table_pagination.tpl"}
 {/if}

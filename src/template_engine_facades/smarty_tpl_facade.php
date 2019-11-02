@@ -7,8 +7,11 @@ class Smarty_Tpl_Facade extends Abstract_Tpl_Facade
 
     public function ConstructEngineObject()
     {
-
-        $this->tplEngineObject_ = new \Smarty();
+        $root = dirname(__DIR__);
+		$this->templateDir_ = $root ."/templates/smarty";
+		$this->cacheDir_ = $root ."/templates/smarty_cache";
+		
+		$this->tplEngineObject_ = new \Smarty();
 
         $this->tplEngineObject_->setTemplateDir($this->templateDir_);
         $this->tplEngineObject_->setCompileDir($this->cacheDir_);
@@ -45,7 +48,7 @@ class Smarty_Tpl_Facade extends Abstract_Tpl_Facade
 
     // these two may be overriden using setters
     // it may be good idea to override cache dir, because of W rights on the server
-    protected $templateDir_ = __DIR__ . "/../templates/smarty";
-    protected $cacheDir_ = __DIR__ . "/../templates/smarty_cache";
+    protected $templateDir_;
+    protected $cacheDir_;
 
 }

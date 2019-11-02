@@ -11,7 +11,7 @@
 
             {foreach $filter_definitions as $filter_definition}
                 {assign var="input_variable" value=$filter_definition}
-                {include file="./atoms_filters/{$filter_definition.type}.tpl"}
+                {include file="atoms_filter/{$filter_definition.type}.tpl"}
             {/foreach}
 
             <div class="col-md-3">
