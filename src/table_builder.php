@@ -5,10 +5,6 @@ namespace CookiesRevenge\Novo\Utilities\NovoTableBuilder;
 class Table_Builder extends Abstract_Builder
 {
 
-    public function __construct() {
-        define("APP_PATH", __DIR__);
-    }
-
     public function BuildTable() {
         $this->templatingEngine_->ConstructEngineObject();
         $this->templatingEngine_
