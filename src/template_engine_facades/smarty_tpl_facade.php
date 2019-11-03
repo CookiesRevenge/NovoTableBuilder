@@ -25,7 +25,7 @@ class Smarty_Tpl_Facade extends Abstract_Tpl_Facade
     public function BuildTableHTML($resultsOnly)
     {
         return $this->tplEngineObject_->fetch($this->templateDir_ . 
-            ($resultsOnly === true) ? "/.table_results.tpl" : "/table.tpl");
+            (($resultsOnly === true) ? "/table_results.tpl" : "/table.tpl"));
     }
 
     public function AssignVariable($varName, $varValue)
